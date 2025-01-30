@@ -3,42 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscription Plans - Stakeholders Overview</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Subscription Plans - Target Market Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .plan {
+            margin-bottom: 30px;
+        }
+        .plan h2 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .visualization {
+            margin: 20px 0;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Subscription Plans Overview</h1>
-        <p>A comprehensive breakdown of our subscription plans, target demographics, and marketing strategies.</p>
-    </header>
+    <div class="container">
+        <h1>Subscription Plans - Target Market Analysis</h1>
 
-    <section id="demographics">
-        <h2>Target Market Demographics</h2>
-        <canvas id="demographicsChart"></canvas>
-    </section>
-
-    <section id="plans">
-        <div class="plan" id="basic">
+        <!-- Basic Plan -->
+        <div class="plan">
             <h2>Basic Plan (R100/month)</h2>
             <p><strong>Target Market:</strong> High school students, pre-law undergraduates, career changers.</p>
-            <p><strong>Income Level:</strong> Low to middle-income (R0 - R10,000/month)</p>
-            <p><strong>Interests:</strong> Law, legal studies, career exploration.</p>
+            <p><strong>Demographics:</strong></p>
+            <ul>
+                <li><strong>Age:</strong> 16-25</li>
+                <li><strong>Location:</strong> Urban/Suburban</li>
+                <li><strong>Income:</strong> Low-Moderate</li>
+                <li><strong>Interests:</strong> Career Exploration, Law School Prep</li>
+            </ul>
+            <div class="visualization">
+                <img src="age_distribution.png" alt="Age Distribution" width="600">
+            </div>
         </div>
-        <div class="plan" id="standard">
-            <h2>Standard Plan (R150/month)</h2>
-            <p><strong>Target Market:</strong> Law students, recent graduates, junior associates.</p>
-            <p><strong>Income Level:</strong> Middle-income (R10,000 - R25,000/month)</p>
-            <p><strong>Interests:</strong> Academic excellence, exam preparation, job search.</p>
-        </div>
-        <div class="plan" id="premium">
-            <h2>Premium Plan (R300/month)</h2>
-            <p><strong>Target Market:</strong> Mid-to-senior level professionals, legal entrepreneurs.</p>
-            <p><strong>Income Level:</strong> High-income (R25,000 - R100,000+/month)</p>
-            <p><strong>Interests:</strong> Leadership, business development, networking.</p>
-        </div>
-    </section>
 
-    <script src="script.js"></script>
+        <!-- Standard Plan -->
+        <div class="plan">
+            <h2>Standard Plan (R150/month)</h2>
+            <p><strong>Target Market:</strong> Law school students, recent graduates, junior associates.</p>
+            <p><strong>Demographics:</strong></p>
+            <ul>
+                <li><strong>Age:</strong> 22-30</li>
+                <li><strong>Location:</strong> Urban</li>
+                <li><strong>Income:</strong> Moderate</li>
+                <li><strong>Interests:</strong> Academic Support, Job Search</li>
+            </ul>
+            <div class="visualization">
+                <iframe src="income_distribution.html" width="100%" height="500px"></iframe>
+            </div>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan">
+            <h2>Premium Plan (R300/month)</h2>
+            <p><strong>Target Market:</strong> Mid-level associates, senior associates, partners, judges, legal academics, legal entrepreneurs.</p>
+            <p><strong>Demographics:</strong></p>
+            <ul>
+                <li><strong>Age:</strong> 30-55+</li>
+                <li><strong>Location:</strong> Major Cities</li>
+                <li><strong>Income:</strong> High</li>
+                <li><strong>Interests:</strong> Leadership, Networking</li>
+            </ul>
+            <div class="visualization">
+                <iframe src="interests_table.html" width="100%" height="300px"></iframe>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
